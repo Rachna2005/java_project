@@ -2,22 +2,21 @@ public class Book implements borrow_return{
     
     static int id = 0;
     String title;
-    // Author author; 
+    Author author; 
     int publishedYear;
     String isbn;
     Category category; 
     int numOfBook;
     // Constructor
-    public Book(String title,  int publishedYear, String isbn, Category category, int numOfBook) {
+    public Book(String title,  int publishedYear, Author author, String isbn, Category category, int numOfBook) {
         id = id + 1;
         this.title = title;
-        // this.author = author;
+        this.author = author;
         this.publishedYear = publishedYear;
         this.isbn = isbn;
         this.category = category;
         this.numOfBook = numOfBook;
     }
-    
 
 
     @Override
