@@ -1,8 +1,9 @@
 public class Test {
     public static void main(String[] args) {
-        Book book1 = new Book( "hhhh", "hhh", 2, 2, "hh", "hhh");
-        System.out.println("My id: " + book1.getId());
-        Book book2 = new Book( "hhhh", "hhh", 2, 2, "hh", "hhh");
-        System.out.println("My id: " + book2.getId());
+        Book book1 = new Book("hh", 0, null, null, 10);
+        System.out.println(book1.title);
+        System.out.println(book1.getid());
+        Book book2 = new Book("hh", 0, null, null, 10);
+        System.out.println(book2.getid());
     }
 }
