@@ -1,5 +1,6 @@
 import java.util.Date;
-public class Transaction {
+
+public class Transaction implements borrow_return {
     static int transactionId = 0;
     int userId;
     int bookId;
@@ -18,6 +19,26 @@ public class Transaction {
 
         this.returnDate = null;
     }
+    
+
+    @Override
+    public void borrowBook() {
+        
+        System.out.println("Transaction " + transactionId + ": Book ID " + bookId + " borrowed by User ID " + userId);
+    }
+
+
+    @Override
+    public void returnBook() {
+        if (returnDate == null) {
+            returnDate = new Date(); // Set the return date to today
+            System.out.println("Transaction " + transactionId + ": Book ID " + bookId + " returned by User ID " + userId);
+        } else {
+            System.out.println("This book has already been returned.");
+        }
+        
+    }
+
     public int gettransactionId() {
         return transactionId;
     }
