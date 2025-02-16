@@ -29,7 +29,7 @@ public class Admin {
 
     // Method to remove a book by ID
     public void removeBook(int bookId) {
-        boolean removed = library.removeIf(book -> book.getId() == bookId); // Remove book by ID
+        boolean removed = library.removeIf(book -> book.getID() == bookId); // Remove book by ID
         if (removed) {
             System.out.println("Book removed successfully: ID " + bookId);
         } else {
@@ -45,7 +45,7 @@ public class Admin {
         }
         System.out.println("Library Books:");
         for (Book book : library) {
-            System.out.println("Title: " + book.getTitle() + ", ID: " + book.getId() + ", Copies: " + book.getNumOfBook());
+            System.out.println("Title: " + book.getTitle() + ", ID: " + book.getID() + ", Copies: " + book.getNumOfBook());
         }
     }
 

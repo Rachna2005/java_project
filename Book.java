@@ -18,7 +18,7 @@ public class Book {
     }
 
     // Getter for ID
-    public int getId() {
+    public int getID() {
         return id;
     }
 

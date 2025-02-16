@@ -33,7 +33,7 @@ public class Category {
         Iterator<Book> iterator = books.iterator();
         while (iterator.hasNext()) {
             Book book = iterator.next();
-            if (book.getIsbn().equals(isbn)) {
+            if (book.getID().equals(ID)) {
                 iterator.remove();
                 System.out.println("Book removed from category '" + name + "': " + book.getTitle());
                 return;
