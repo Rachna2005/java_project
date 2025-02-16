@@ -1,44 +1,49 @@
-public class Book implements borrow_return{
-    
-    static int id = 0;
-    String title;
-    Author author; 
-    int publishedYear;
-    String isbn;
-    Category category; 
-    int numOfBook;
+public class Book {
+    private static int idCounter = 0;
+    private int id;
+    private String title;
+    private int publishedYear;
+    private Author author;
+    private Category category;
+    private int numOfBook;
+
     // Constructor
-    public Book(String title,  int publishedYear, Author author, String isbn, Category category, int numOfBook) {
-        id = id + 1;
+    public Book(String title, int publishedYear, Author author, Category category, int numOfBook) {
+        this.id = ++idCounter;  // Unique ID for each book
         this.title = title;
-        this.author = author;
         this.publishedYear = publishedYear;
-        this.isbn = isbn;
+        this.author = author;
         this.category = category;
         this.numOfBook = numOfBook;
     }
 
-
-    @Override
-    public void borrowBook() {
-        
-        if (numOfBook > 0) {
-            numOfBook--;
-            System.out.println("Borrowed: " + title);
-        } else {
-            System.out.println("No copies available.");
-        }
-    }
-
-
-    @Override
-    public void returnBook() {
-        numOfBook++;
-        System.out.println("Returned: " + title);
-    }
-
-    public int getid() {
+    // Getter for ID
+    public int getId() {
         return id;
     }
-    
+
+    // Getter for Title
+    public String getTitle() {
+        return title;
+    }
+
+    // Getter for number of books
+    public int getNumOfBook() {
+        return numOfBook;
+    }
+
+    // Getter for Author
+    public Author getAuthor() {
+        return author;
+    }
+
+    // Getter for Published Year
+    public int getPublishedYear() {
+        return publishedYear;
+    }
+
+    // Getter for Category
+    public Category getCategory() {
+        return category;
+    }
 }
