@@ -2,7 +2,6 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-
 public class Category {
     private String name;
     private List<Book> books;
@@ -23,9 +22,9 @@ public class Category {
         System.out.println("Book added to category '" + name + "': " + book.getTitle());
     }
 
-    // Remove a book from the category by ISBN
-    public void removeBook(String isbn) {
-        if (isbn == null || isbn.isEmpty()) {
+    // Remove a book from the category 
+    public void removeBook(String ID) {
+        if (ID == null || ID.isEmpty()) {
             System.out.println("Invalid ISBN.");
             return;
         }
@@ -39,7 +38,7 @@ public class Category {
                 return;
             }
         }
-        System.out.println("Book with ISBN " + isbn + " not found in category '" + name + "'.");
+        System.out.println("Book with ID " + ID + " not found in category '" + name + "'."); // Corrected this line
     }
 
     // Display all books in the category
