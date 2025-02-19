@@ -1,4 +1,4 @@
-public class Book implements borrow_return{
+public class Book {
     
     static int id = 0;
     String title;
@@ -16,25 +16,6 @@ public class Book implements borrow_return{
         this.isbn = isbn;
         this.category = category;
         this.numOfBook = numOfBook;
-    }
-
-
-    @Override
-    public void borrowBook() {
-        
-        if (numOfBook > 0) {
-            numOfBook--;
-            System.out.println("Borrowed: " + title);
-        } else {
-            System.out.println("No copies available.");
-        }
-    }
-
-
-    @Override
-    public void returnBook() {
-        numOfBook++;
-        System.out.println("Returned: " + title);
     }
 
     public int getid() {

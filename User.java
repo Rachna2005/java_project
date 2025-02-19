@@ -1,33 +1,28 @@
 public class User {
+    private static int idCounter = 0;
+    protected int Id ;
+    protected String name;
+    protected String email;
+    protected String phoneNumber;
+    protected String password; 
 
-    static int userIdCounter = 0; 
-    private int userId; 
-    private String name;
-    private int phoneNumber;
-    private String email;
-    private String position;
-
-    // Constructor with name, phone number, email, and position
-    public User(String name, int phoneNumber, String email, String position) {
-        this.userId = ++userIdCounter; 
+    public User( String name, String email, String phoneNumber, String password) {
+        this.Id = ++idCounter;
         this.name = name;
-        this.phoneNumber = phoneNumber;
         this.email = email;
-        this.position = position;
+        this.phoneNumber = phoneNumber;
+        this.password = password;
     }
 
-    // Getter for userId
-    public int getUserId() {
-        return userId;
-    }
-
-    // Method to display user details
-    public void displayUserInfo() {
-        System.out.println("User ID: " + userId);
+    
+    public void displayUserDetails() {
+        System.out.println("User ID: " +Id);
         System.out.println("Name: " + name);
         System.out.println("Email: " + email);
         System.out.println("Phone Number: " + phoneNumber);
-        System.out.println("Position: " + position);
     }
+    // public int getUserId() { // Required for access
+    //     return Id;
+    // }
 
 }
