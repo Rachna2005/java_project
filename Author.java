@@ -72,6 +72,15 @@ public class Author {
         return awards;
     }
 
+    
+
+    @Override
+    public String toString() {
+        return "Author [authorId=" + authorId + ", name=" + name + ", nationality=" + nationality + ", dateOfBirth="
+                + dateOfBirth + ", biography=" + biography + ", booksWritten=" + booksWritten + ", genres=" + genres
+                + ", contactInfo=" + contactInfo + ", awards=" + awards + "]";
+    }
+
     // Method to display author details
     public void displayAuthorInfo() {
         System.out.println("Author ID: " + authorId);

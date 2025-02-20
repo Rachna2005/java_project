@@ -1,8 +1,7 @@
 import java.util.HashMap;
-import java.util.Map;
 
 public class Member extends User {
-    private static Map<String, Member> memberDatabase = new HashMap<>(); // Store registered members
+    private static HashMap<String, Member> memberDatabase = new HashMap<>(); // Store registered members
 
     public Member( String name, String email, String phoneNumber, String password) {
         super( name, email, phoneNumber, password);
@@ -22,7 +21,7 @@ public class Member extends User {
     public void login(String email, String password) {
         Member member = memberDatabase.get(email);
 
-        if (member != null && member.password.equals(password)) {
+        if (member != null && member.verifyPassword(password)) {
             System.out.println("Login successful! Welcome, " + member.name);
             
         } else {
